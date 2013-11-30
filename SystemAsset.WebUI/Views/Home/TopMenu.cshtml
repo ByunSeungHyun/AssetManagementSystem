@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "TopMenu";
+	Layout = null;
+}
+<style type="text/css">
+	#nav-tier-3 { z-index:2000; }
+</style>
+<div id="head-wrap">
+	<h1><a href="#"><span id="ebayLogo">Ebay</span> Asset Management</a></h1>
+	<div id="logInfo">Hello, joannlee 사원<a href="#">Logout</a></div>
+</div>
+<nav>
+	<ul id="nav-tier-1">
+		<li><a href="#"><i class="fa fa-tachometer fa-fw"></i>Dashboard</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer dash-point"></i>
+			<ul>
+				<li><a href="#">Server</a>
+					<div  id="nav-tier-3">
+					<ul>
+                        <li>@Html.ActionLink("Physical/Virtual", "ServerTypeList", "Dashboard", null, null)</li>
+                        <li>@Html.ActionLink("입고년도", "WareYearList", "Dashboard", null, null)</li>
+                        <li>@Html.ActionLink("업무별", "ServerWorkList", "Dashboard", null, null)</li>
+					</ul>
+					</div>
+				</li>
+				<li><a href="#">Network</a>
+					<div  id="nav-tier-3">
+					<ul>
+                        <li>@Html.ActionLink("업무별", "NetworkWorkList", "Dashboard", null, null)</li>
+                        <li>@Html.ActionLink("Location", "LocationList", "Dashboard", null, null)</li>
+					</ul>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-file-text fa-fw"></i>Asset</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer asset-point"></i>
+			<ul>
+				<li>@Html.ActionLink("Server", "ServerList", "Asset", null, null)</li>
+				<li>@Html.ActionLink("Network", "NetworkList", "Asset", null, null)</li>
+				<li>@Html.ActionLink("Storage", "StorageList", "Asset", null, null)</li>
+				<li>@Html.ActionLink("기타", "EtcList", "Asset", null, null)</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-pencil-square-o fa-fw"></i>Code</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer code-point"></i>
+			<ul>
+				<li><a href="#">Common</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li>@Html.ActionLink("IDC", "CommonAssetIdcCodeList", "Code", null, null)</li>
+						<li>@Html.ActionLink("RACK", "CommonAssetRackCodeList", "Code", null, null)</li>
+						<li>@Html.ActionLink("SITE", "CommonCodeList", "Code", new { asset_group_type = "COMMON", type = "SITE" }, null)</li>
+					</ul>
+					</div>
+				</li>
+				<li><a href="#">Server</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li>@Html.ActionLink("업무", "CommonCodeList", "Code", new { asset_group_type = "SERVER", type = "BUSINESS" }, null)</li>
+						<li>@Html.ActionLink("서비스", "CommonCodeList", "Code", new { asset_group_type = "SERVER", type = "SERVICE" }, null)</li>
+						<li>@Html.ActionLink("장비구분", "CommonCodeList", "Code", new { asset_group_type = "SERVER", type = "Hardware" }, null)</li>
+						<li>@Html.ActionLink("VENDER", "CommonAssetServerVenderCodeList", "Code", null, null)</li>
+						<li>@Html.ActionLink("OS", "CommonCodeList", "Code", new { asset_group_type = "SERVER", type = "OS" }, null)</li>
+					</ul>
+					</div>
+				</li>
+				<li><a href="#">Network</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li>@Html.ActionLink("장비구분", "CommonCodeList", "Code", new { asset_group_type = "NETWORK", type = "Hardware" }, null)</li>
+						<li>@Html.ActionLink("VENDER", "CommonAssetNetworkVenderCodeList", "Code", null, null)</li>
+					</ul>
+					</div>
+				</li>
+				<li><a href="#">Storage</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li>@Html.ActionLink("장비구분", "CommonCodeList", "Code", new { asset_group_type = "STORAGE", type = "Hardware" }, null)</li>
+						<li>@Html.ActionLink("VENDER", "CommonAssetStorageVenderCodeList", "Code", null, null)</li>
+					</ul>
+					</div>
+				</li>
+				<li>@Html.ActionLink("IP 분류 Code", "CommonAssetIpTypeList", "Code", null , null)</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-user fa-fw"></i>사용자</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer user-point"></i>
+			<ul>
+				<li>@Html.ActionLink("사용자", "UserList", "User", null , null)</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-laptop fa-fw"></i>IP Info</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer ip-point"></i>
+			<ul>
+                <li>@Html.ActionLink("전체", "IPList", "Ipinfo", null, null)</li>
+				<li><a href="#">목동_DMZ_IAC</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li><a href="#">172.30.133</a></li>
+						<li><a href="#">172.30.144</a></li>
+					</ul>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-info-circle fa-fw"></i>Rack Info</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer rack-point"></i>
+			<ul>
+				<li><a href="#">전체</a></li>
+				<li><a href="#">목동_10층</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li><a href="#">장비구분</a></li>
+					</ul>
+					</div>
+				</li>
+				<li><a href="#">논현_9층</a>
+					<div  id="nav-tier-3">
+					<ul>
+						<li><a href="#">A열</a></li>
+					</ul>
+					</div>
+				</li>
+			</ul>
+			</div>
+		</li>
+		<li><a href="#"><i class="fa fa-wrench fa-fw"></i>Setup</a>
+			<div id="nav-tier-2">
+			<i class="fa fa-caret-down nav-pointer set-point"></i>
+			<ul>
+				<li><a href="#">Server</a></li>
+			</ul>
+			</div>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "UserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head{
+	<script language="javascript" type="text/javascript" src="~/Views/User/UserList.js"></script>
+	<script language = "javascript">
+	    $(function () {
+	        $("#jqGridList").jqGrid({
+	            mtype: 'POST',
+	            datatype: function (postdata) {
+	                jQuery.ajax({
+	                    thegrid: this,
+	                    url: $("#jqGridList").getGridParam('url'),
+	                    type: 'POST',
+	                    data: $.JsonPostDataConverter(postdata),
+	                    dataType: "json",
+	                    complete: function (xmldata, stat) {
+	                        if (stat == "success") {
+	                            jsonObj = jQuery.parseJSON(xmldata.responseText, convertDates = true);
+	                            this.thegrid.addJSONData(jsonObj);
+	                        }
+	                    }
+	                })
+	            },
+	            width: '1800',
+	            height: '500',
+	            rowNum: 10,
+	            //rowList: [10, 20, 30, 40],
+	            pager: '#jpGridPager',
+	            sortname: 'Seq',
+	            sortorder: "desc",
+	            //rowTotal: -1,
+	            loadError: function (xhr, st, err) {
+	                alert("Type: " + st + "; Response: " + xhr.status + " " + xhr.statusText);
+	            },
+	            //gridview: true,
+	            viewrecords: true,
+	            pgbuttons: true,
+	            jsonReader: { repeatitems: false, id: "0" },
+	            //autowidth: true,
+	            multiselect: true,
+	            colModel: [
+				{ name: 'LoginId', index: 'LoginId', label: '로그인 아이디', width: 100, sortable: false, align: "center" },
+				{ name: 'LastLoginDate', index: 'LastLoginDate', label: '최종 로그인', width: 100, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'IsDeleted', index: 'IsDeleted', label: '삭제여부', width: 100, sortable: false, align: "center" },
+				{ name: 'DeletedDate', index: 'DeletedDate', label: '삭제일자', width: 100, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'InsertUser', index: 'InsertUser', label: '입력자', width: 100, sortable: false, align: "center" },
+				{ name: 'InsertDate', index: 'InsertDate', label: '만료일자', width: 100, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" }
+				]
+
+	        });
+	        $("#jqGridList").jqGrid('navGrid', '#jpGridPager', { edit: false, add: false, del: false, search: false });
+
+	    });
+
+	    $(document).ready(function () {
+	        UserList.Init();
+	    });
+		
+	</script>	
+}
+<h2><i class="fa fa-file-text fa-fw"></i>사용자 조회</h2>
+@using (Html.BeginForm("UserList", "Asset", FormMethod.Post, new { name = "frmUserList", id = "frmUserList" }))
+{
+	@Html.TextBox("searchText", "", new { id = "txtSearchText", @class = "search" })
+}
+
+<section>
+	<div class="table-scroll">
+	<table class="table-1 cell-separate" id="jqGridList">
+	</table>
+	<div id="jpGridPager"></div>
+	</div>
+	@*<div class="button-wrap">
+		<a href="javascript:;" id="btnServerAdd" class="button-main">추가</a>
+		<a href="javascript:;" id="btnServerEdit" class="button-main">편집</a>
+		<a href="javascript:;" id="btnServerDel" class="button-main">삭제</a>
+		<a href="javascript:;" id="btnServerXlsDownload" class="button-sub"><i class="fa fa-download fa-fw"></i>Download</a>
+		<a href="javascript:;" id="btnServerXlsUpload" class="button-sub"><i class="fa fa-upload fa-fw"></i><input type="file" class="hidden"/>Upload</a>
+	</div>*@
+</section>
+
+

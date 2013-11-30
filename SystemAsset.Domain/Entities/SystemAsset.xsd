@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HRMS"
+    targetNamespace="http://tempuri.org/HRMS.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/HRMS.xsd"
+    xmlns:mstns="http://tempuri.org/HRMS.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:complexType name="ProjectT">
+    <xs:attribute name="ProjectNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="UserId"	type="xs:string"/>
+    <xs:attribute name="ProjectDomain" type="xs:string"/>
+    <xs:attribute name="ProjectBcNo" type="xs:int"/>
+    <xs:attribute name="ProjectType" type="xs:string"/>
+    <xs:attribute name="ProjectName" type="xs:string"/>
+    <xs:attribute name="ProjectPmName" type="xs:string"/>
+    <xs:attribute name="ProjectStartDate"	type="xs:dateTime"/>
+    <xs:attribute name="ProjectPlanLTS"	type="xs:dateTime"/>
+    <xs:attribute name="ProjectLTS"	type="xs:dateTime"/>
+    <xs:attribute name="Status"	type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="TeamT">
+    <xs:attribute name="TeamCode" type="xs:string" use="prohibited"/>
+    <xs:attribute name="TeamName" type="xs:string" />
+    <xs:attribute name="HeadCode" type="xs:string" />
+    <xs:attribute name="HeadName" type="xs:string" />
+    <xs:attribute name="ManagerId" type="xs:string" />
+    <xs:attribute name="ManagerName" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="UserT">
+    <xs:attribute name="LoginId" type="xs:string" />
+    <xs:attribute name="LastLoginDate" type="xs:date"/>
+    <xs:attribute name="IsDeleted" type="xs:boolean"/>
+    <xs:attribute name="DeletedDate" type="xs:date"/>
+    <xs:attribute name="InsertUser" type="xs:string"/>
+    <xs:attribute name="InsertDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="TeamTree" mixed="true">
+    <xs:attribute name="TeamCode" type="xs:string" use="prohibited"/>
+  </xs:complexType>
+
+  <xs:complexType name="CategoryT">
+    <xs:attribute name="LCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="MCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="SCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="ActivityNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="CategoryLevel" type="xs:int" use="prohibited"/>
+    <xs:attribute name="CategoryName" type="xs:string" />
+    <xs:attribute name="LCategoryName" type="xs:string" />
+    <xs:attribute name="MCategoryName" type="xs:string" />
+    <xs:attribute name="SCategoryName" type="xs:string" />
+    <xs:attribute name="ActivityName" type="xs:string" />
+    <xs:attribute name="Status"	type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="CategoryTree" mixed="true">
+    <xs:attribute name="CategoryLevel" type="xs:int" use="prohibited"/>
+    <xs:attribute name="LCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="MCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="SCategoryNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="ActivityNo" type="xs:int" use="prohibited"/>
+  </xs:complexType>
+
+  <xs:complexType name="UserActivityT">
+    <xs:attribute name="UserActivityNo" type="xs:int" use="prohibited"/>
+    <xs:attribute name="UserId" type="xs:string"/>
+    <xs:attribute name="ActivityDate" type="xs:dateTime"/>
+    <xs:attribute name="TeamCode" type="xs:string"/>
+
+    <xs:attribute name="ProjectNo" type="xs:int"/>
+
+    <xs:attribute name="LCategoryNo" type="xs:int"/>
+    <xs:attribute name="MCategoryNo" type="xs:int"/>
+    <xs:attribute name="SCategoryNo" type="xs:int"/>
+    <xs:attribute name="ActivityNo" type="xs:int"/>
+
+    <xs:attribute name="LCategoryName" type="xs:string" />
+    <xs:attribute name="MCategoryName" type="xs:string" />
+    <xs:attribute name="SCategoryName" type="xs:string" />
+    <xs:attribute name="ActivityName" type="xs:string" />
+
+    <xs:attribute name="ResourceHour" type="xs:double"/>
+    <xs:attribute name="Status"	type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="ReportT">
+    <xs:attribute name="HashCode" type="xs:string" use="prohibited"/>
+    <xs:attribute name="Code" type="xs:string" />
+    <xs:attribute name="CodeName" type="xs:string" />
+    <xs:attribute name="TCode" type="xs:string" />
+    <xs:attribute name="TCodeName" type="xs:string" />
+
+    <xs:attribute name="LCategoryNo" type="xs:int" />
+    <xs:attribute name="MCategoryNo" type="xs:int" />
+    <xs:attribute name="SCategoryNo" type="xs:int" />
+    <xs:attribute name="LCategoryName" type="xs:string" />
+    <xs:attribute name="MCategoryName" type="xs:string" />
+    <xs:attribute name="SCategoryName" type="xs:string" />
+    <xs:attribute name="ResourceHour" type="xs:double"/>
+    <xs:attribute name="UserCount" type="xs:double" />
+  </xs:complexType>
+
+  <xs:complexType name="AssignedProjectT">
+    <xs:attribute name="UserId" type="xs:string" use="prohibited"/>
+    <xs:attribute name="ProjectBcNo" type="xs:int"/>
+    <xs:attribute name="Role" type="xs:string" />
+    <xs:attribute name="ManDay" type="xs:int" />
+  </xs:complexType>
+
+  <xs:complexType name="ServerT">
+    <xs:attribute name="ServerIP" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="HolidayT">
+    <xs:attribute name="HolidayName" type="xs:string" use="required"/>
+    <xs:attribute name="HolidayDate" type="xs:date" use="prohibited"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="UserSkillT">
+    <xs:attribute name="UserId"         type="xs:string"/>
+    <xs:attribute name="UserName"       type="xs:string"/>
+    <xs:attribute name="SkillDcode"     type="xs:int"/>
+    <xs:attribute name="SkillLevel"     type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="SkillSetT">
+    <xs:attribute name="SkillLcode"     type="xs:int"/>
+    <xs:attribute name="SkillMcode"     type="xs:int"/>
+    <xs:attribute name="SkillScode"     type="xs:int"/>
+    <xs:attribute name="SkillDcode"     type="xs:int"/>
+    <xs:attribute name="SkillLname"     type="xs:string"/>
+    <xs:attribute name="SkillMname"     type="xs:string"/>
+    <xs:attribute name="SkillSname"     type="xs:string"/>
+    <xs:attribute name="SkillDname"     type="xs:string"/>
+    <xs:attribute name="SkillCodeLevel" type="xs:int"/>
+  </xs:complexType>
+
+  <xs:complexType name="SkillAndUserT">
+    <xs:attribute name="UserId"         type="xs:string"/>
+    <xs:attribute name="SkillLcode"     type="xs:int"/>
+    <xs:attribute name="SkillMcode"     type="xs:int"/>
+    <xs:attribute name="SkillScode"     type="xs:int"/>
+    <xs:attribute name="SkillDcode"     type="xs:int"/>
+    <xs:attribute name="SkillLname"     type="xs:string"/>
+    <xs:attribute name="SkillMname"     type="xs:string"/>
+    <xs:attribute name="SkillSname"     type="xs:string"/>
+    <xs:attribute name="SkillDname"     type="xs:string"/>
+    <xs:attribute name="SkillLevel"     type="xs:int"/>
+    <xs:attribute name="SkillCodeLevel" type="xs:int"/>
+  </xs:complexType>
+  <xs:complexType name="AssetCommonCodeT">
+    <xs:attribute name="AssetType" type="xs:string" />
+    <xs:attribute name="AssetCode" type="xs:string"/>
+    <xs:attribute name="CodeName" type="xs:string"/>
+    <xs:attribute name="CodeDesc" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetIdcCodeT">
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="LClassCode" type="xs:string"/>
+    <xs:attribute name="LClassName" type="xs:string"/>
+    <xs:attribute name="SClassCode" type="xs:string"/>
+    <xs:attribute name="SClassName" type="xs:string"/>
+    <xs:attribute name="PartRoomYn" type="xs:string"/>
+    <xs:attribute name="IdcOperFloor" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetRackCodeT">
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="RackCode" type="xs:string"/>
+    <xs:attribute name="RackName" type="xs:string"/>
+    <xs:attribute name="RackColLocationValue" type="xs:int"/>
+    <xs:attribute name="RackColCode" type="xs:string"/>
+    <xs:attribute name="RackLocationValue" type="xs:int"/>
+    <xs:attribute name="RackLocationCode" type="xs:string"/>
+    <xs:attribute name="RackSize" type="xs:int"/>
+    <xs:attribute name="PillarYn" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetServerVenderCodeT">
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="VenderName" type="xs:string"/>
+    <xs:attribute name="ProductName" type="xs:string"/>
+    <xs:attribute name="ProcessCnt" type="xs:int"/>
+    <xs:attribute name="CpuTypeName" type="xs:string"/>
+    <xs:attribute name="TotalCoreCnt" type="xs:int"/>
+    <xs:attribute name="MemorySizeName" type="xs:string"/>
+    <xs:attribute name="ServerCnt" type="xs:int"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+
+  </xs:complexType>
+  <xs:complexType name="AssetNetworkVenderCodeT">
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="VenderName" type="xs:string"/>
+    <xs:attribute name="ProductName" type="xs:string"/>
+    <xs:attribute name="ServerCnt" type="xs:int"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+
+  </xs:complexType>
+  <xs:complexType name="AssetStorageVenderCodeT">
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="VenderName" type="xs:string"/>
+    <xs:attribute name="ProductName" type="xs:string"/>
+    <xs:attribute name="ServerCnt" type="xs:int"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+
+  </xs:complexType>
+
+  <xs:complexType name="AssetEtcVenderCodeT">
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="VenderName" type="xs:string"/>
+    <xs:attribute name="ProductName" type="xs:string"/>
+    <xs:attribute name="ServerCnt" type="xs:int"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+
+  </xs:complexType>
+  <xs:complexType name="AssetServerInfoT">
+    <xs:attribute name="Seq" type="xs:long"/>
+    <xs:attribute name="BuyDate" type="xs:date"/>
+    <xs:attribute name="SapNo" type="xs:string"/>
+    <xs:attribute name="EquipTypeCode" type="xs:string"/>
+    <xs:attribute name="SerialNo" type="xs:string"/>
+    <xs:attribute name="ServerName" type="xs:string"/>
+    <xs:attribute name="SiteCode" type="xs:string"/>
+    <xs:attribute name="TaskCode" type="xs:string"/>
+    <xs:attribute name="ServiceCode" type="xs:string"/>
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="RackCode" type="xs:string"/>
+    <xs:attribute name="RackStartLocationValue" type="xs:int"/>
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="Qty" type="xs:int"/>
+    <xs:attribute name="OsCode" type="xs:string"/>
+    <xs:attribute name="Content" type="xs:string"/>
+    <xs:attribute name="DelYn" type="xs:string"/>
+    <xs:attribute name="DelDate" type="xs:date"/>
+    <xs:attribute name="DelOprt" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+  <xs:complexType name="AssetServerInfoEx1T">
+    <xs:complexContent>
+      <xs:extension base="AssetServerInfoT">
+        <xs:sequence />
+        <xs:attribute name="EquipTypeName" type="xs:string"/>
+        <xs:attribute name="IdcName" type="xs:string" />
+        <xs:attribute name="SiteName" type="xs:string" />
+        <xs:attribute name="TaskName" type="xs:string" />
+        <xs:attribute name="ServiceName" type="xs:string" />
+        <xs:attribute name="RackLocationCode" type="xs:string" />
+        <xs:attribute name="VenderName" type="xs:string" />
+        <xs:attribute name="ProductName" type="xs:string" />
+        <xs:attribute name="OsName" type="xs:string" />
+        <xs:attribute name="ProcessCnt" type="xs:int" />
+        <xs:attribute name="CpuTypeName" type="xs:string" />
+        <xs:attribute name="TotalCoreCnt" type="xs:int" />
+        <xs:attribute name="MemorySizeName" type="xs:string" />
+        <xs:attribute name="ServerIp" type="xs:string" />
+        <xs:attribute name="ExpireDate" type="xs:date" />
+        <xs:attribute name="RemainDay" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="AssetNetworkInfoT">
+    <xs:attribute name="Seq" type="xs:long"/>
+    <xs:attribute name="BuyDate" type="xs:date"/>
+    <xs:attribute name="SapNo" type="xs:string"/>
+    <xs:attribute name="EquipTypeCode" type="xs:string"/>
+    <xs:attribute name="SerialNo" type="xs:string"/>
+    <xs:attribute name="ServerName" type="xs:string"/>
+    <xs:attribute name="SiteCode" type="xs:string"/>
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="RackCode" type="xs:string"/>
+    <xs:attribute name="RackStartLocationValue" type="xs:int"/>
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="Qty" type="xs:int"/>
+    <xs:attribute name="Content" type="xs:string"/>
+    <xs:attribute name="DelYn" type="xs:string"/>
+    <xs:attribute name="DelDate" type="xs:date"/>
+    <xs:attribute name="DelOprt" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetNetworkInfoEx1T">
+    <xs:complexContent>
+      <xs:extension base="AssetNetworkInfoT">
+        <xs:sequence />
+        <xs:attribute name="EquipTypeName" type="xs:string"/>
+        <xs:attribute name="IdcName" type="xs:string" />
+        <xs:attribute name="SiteName" type="xs:string" />
+        <xs:attribute name="RackLocationCode" type="xs:string" />
+        <xs:attribute name="VenderName" type="xs:string" />
+        <xs:attribute name="ProductName" type="xs:string" />
+        <xs:attribute name="ProcessCnt" type="xs:int" />
+        <xs:attribute name="CpuTypeName" type="xs:string" />
+        <xs:attribute name="TotalCoreCnt" type="xs:int" />
+        <xs:attribute name="MemorySizeName" type="xs:string" />
+        <xs:attribute name="ServerIp" type="xs:string" />
+        <xs:attribute name="ExpireDate" type="xs:date" />
+        <xs:attribute name="RemainDay" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="AssetNetworkInfoEx2T">
+    <xs:complexContent>
+      <xs:extension base="AssetNetworkInfoT">
+        <xs:sequence />
+        <xs:attribute name="EquipTypeName" type="xs:string"/>
+        <xs:attribute name="IdcName" type="xs:string" />
+        <xs:attribute name="SiteName" type="xs:string" />
+        <xs:attribute name="RackLocationCode" type="xs:string" />
+        <xs:attribute name="VenderName" type="xs:string" />
+        <xs:attribute name="ProductName" type="xs:string" />
+        <xs:attribute name="ProcessCnt" type="xs:int" />
+        <xs:attribute name="CpuTypeName" type="xs:string" />
+        <xs:attribute name="TotalCoreCnt" type="xs:int" />
+        <xs:attribute name="MemorySizeName" type="xs:string" />
+        <xs:attribute name="ServerIp" type="xs:string" />
+        <xs:attribute name="ExpireDate" type="xs:date" />
+        <xs:attribute name="RemainDay" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="AssetIpTypeT">
+    <xs:attribute name="IpClassCode" type="xs:string"/>
+    <xs:attribute name="IpClassName" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetIpInfoT">
+    <xs:attribute name="ServerIp" type="xs:string"/>
+    <xs:attribute name="GroupIp" type="xs:string"/>
+    <xs:attribute name="ServerName" type="xs:string"/>
+    <xs:attribute name="AssignDate" type="xs:date"/>
+    <xs:attribute name="ReturnDate" type="xs:date"/>
+    <xs:attribute name="OldServerName" type="xs:string"/>
+    <xs:attribute name="ManagerName" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+  
+  <xs:complexType name="AssetIpInfoEX1T">
+    <xs:complexContent>
+      <xs:extension base="AssetIpInfoT">
+        <xs:sequence />
+        <xs:attribute name="IpClassName" type="xs:string"/>
+        <xs:attribute name="ExposeIpYn" type="xs:string" />
+        <xs:attribute name="IpClassCode" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="AssetIpGroupT">
+    <xs:attribute name="GroupIp" type="xs:string"/>
+    <xs:attribute name="IpClassCode" type="xs:string"/>
+    <xs:attribute name="ExposeIpYn" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetStorageInfoT">
+    <xs:attribute name="Seq" type="xs:long"/>
+    <xs:attribute name="BuyDate" type="xs:date"/>
+    <xs:attribute name="SapNo" type="xs:string"/>
+    <xs:attribute name="EquipTypeCode" type="xs:string"/>
+    <xs:attribute name="SerialNo" type="xs:string"/>
+    <xs:attribute name="ServerName" type="xs:string"/>
+    <xs:attribute name="SiteCode" type="xs:string"/>
+    <xs:attribute name="TaskCode" type="xs:string"/>
+    <xs:attribute name="ServiceCode" type="xs:string"/>
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="RackCode" type="xs:string"/>
+    <xs:attribute name="RackStartLocationValue" type="xs:int"/>
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="Qty" type="xs:int"/>
+    <xs:attribute name="OsCode" type="xs:string"/>
+    <xs:attribute name="Content" type="xs:string"/>
+    <xs:attribute name="DelYn" type="xs:string"/>
+    <xs:attribute name="DelDate" type="xs:date"/>
+    <xs:attribute name="DelOprt" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="AssetStorageInfoEx1T">
+    <xs:complexContent>
+      <xs:extension base="AssetStorageInfoT">
+        <xs:sequence />
+        <xs:attribute name="HostName"        type="xs:string"/>
+        <xs:attribute name="EquipTypeName" type="xs:string"/>
+        <xs:attribute name="ExpireDate" type="xs:date" />
+        <xs:attribute name="RemainDay" type="xs:int" />
+        <xs:attribute name="IdcName" type="xs:string" />
+        <xs:attribute name="SiteName" type="xs:string" />
+        <xs:attribute name="RackLocationCode" type="xs:string" />
+        <xs:attribute name="VenderName" type="xs:string" />
+        <xs:attribute name="ProductName" type="xs:string" />
+        <xs:attribute name="ProcessCnt" type="xs:int" />
+        <xs:attribute name="ServerIp" type="xs:string" />
+        <xs:attribute name="Content" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssetEtcInfoT">
+    <xs:attribute name="Seq" type="xs:long"/>
+    <xs:attribute name="EquipTypeCode" type="xs:string"/>
+    <xs:attribute name="ServerName" type="xs:string"/>
+    <xs:attribute name="IdcCode" type="xs:string"/>
+    <xs:attribute name="RackCode" type="xs:string"/>
+    <xs:attribute name="RackStartLocationValue" type="xs:int"/>
+    <xs:attribute name="VenderCode" type="xs:string"/>
+    <xs:attribute name="Content" type="xs:string"/>
+    <xs:attribute name="DelYn" type="xs:string"/>
+    <xs:attribute name="DelDate" type="xs:date"/>
+    <xs:attribute name="DelOprt" type="xs:string"/>
+    <xs:attribute name="InsOprt" type="xs:string"/>
+    <xs:attribute name="InsDate" type="xs:date"/>
+  </xs:complexType>
+  <xs:complexType name="AssetEtcInfoEx1T">
+    <xs:complexContent>
+      <xs:extension base="AssetEtcInfoT">
+        <xs:sequence />
+        <xs:attribute name="EquipTypeName" type="xs:string"/>
+        <xs:attribute name="IdcName" type="xs:string" />
+        <xs:attribute name="RackLocationCode" type="xs:string" />
+        <xs:attribute name="VenderName" type="xs:string" />
+        <xs:attribute name="ProductName" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>

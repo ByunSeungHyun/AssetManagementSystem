@@ -1,0 +1,82 @@
+﻿@model SystemAsset.Domain.Entities.AssetEtcInfoEx1T
+@using SystemAsset.WebUI.Models
+@{
+    ViewBag.Title = "EtcUpdate";
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+}
+@section head{
+	<script language="javascript" type="text/javascript" src="~/Views/Asset/EtcUpdate.js"></script>
+	<style type="text/css">
+		#ui-datepicker-div
+		{
+			display: none;
+		}
+	</style>
+	<script language = "javascript">
+	    $(document).ready(function () {
+	        EtcUpdate.Init();
+	    });
+	</script>
+	
+}
+<div id="popup-wrap-large">
+	
+	<section>
+@using (Html.BeginForm("EtcUpdate", "Asset", FormMethod.Post, new { name = "frmEtcUpdate", id = "frmEtcUpdate" }))
+ {
+		<h3>@ViewData["Tiele"]</h3>
+		<table class="table-pop-large">
+			<tr>
+				<th>SEQNO</th>
+				<td>
+					@Html.TextBox("Seq", Model.Seq, new { id = "txtSeq", @class = "cell-input", disabled = true })
+				</td>
+				
+			</tr>
+			<tr>
+				<th>Hostname</th>
+				<td>
+					@Html.TextBox("ServerName", Model.ServerName, new { id = "txtServerName", @class = "cell-input" })
+				</td>
+				<th>장비구분</th>
+				<td>
+					@Html.DropDownList("EquipTypeCode", new SelectList(ViewBag.HardwareCodeList, "AssetCode", "CodeName", Model.EquipTypeCode), new { id = "selEquipTypeCode", @class = "cell-select" })
+				</td>
+                <th>IDC</th>
+				<td>
+					@Html.DropDownList("IdcCode", new SelectList(ViewBag.IdcCodeList, "IdcCode", "LClassName", Model.IdcCode), new { id = "selIdcCode", @class = "cell-select" })
+				</td>
+				
+			</tr>
+		
+			<tr>
+				
+				<th>Rack</th>
+				<td>
+					@Html.DropDownList("RackCode", new SelectList(ViewBag.RackCodeList, "RackCode", "RackName", Model.RackCode), new { id = "selRackCode", @class = "cell-select" })
+				</td>
+				<th>Rack시작위치</th>
+				<td>@Html.TextBox("RackStartLocationValue", Model.RackStartLocationValue, new { id = "txtRackStartLocationValue", @class = "calendar" })</td>
+			
+            
+				<th>Vender</th>
+				<td>
+					@Html.DropDownList("VenderCode", new SelectList(ViewBag.VenderCodeList, "VenderCode", "VenderCode", Model.VenderCode), new { id = "selVenderCode", @class = "cell-select" })
+				</td>
+			</tr>
+				
+			<tr>
+				<th>내용</th>
+				<td colspan="5">
+					@Html.TextArea("Content", Model.Content, 4, 80, new { id = "txtContent", @class = "cell-text" })
+				</td>
+			</tr>
+		</table>
+		<div class="button-wrap-pop">
+			<a href="javascript:;" id="btnSave" class="button-main">확인</a>
+			<a href="javascript:;" id="btnClose" class="button-sub">취소</a>
+		</div>
+ }
+	</section>
+</div>
+

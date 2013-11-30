@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "EtcList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head{
+	<script language="javascript" type="text/javascript" src="~/Views/Asset/EtcList.js"></script>
+	<script language = "javascript">
+
+	    $(function () {
+	        $("#jqGridList").jqGrid({
+	            mtype: 'POST',
+	            datatype: function (postdata) {
+	                jQuery.ajax({
+	                    thegrid: this,
+	                    url: $("#jqGridList").getGridParam('url'),
+	                    type: 'POST',
+	                    data: $.JsonPostDataConverter(postdata),
+	                    dataType: "json",
+	                    complete: function (xmldata, stat) {
+	                        if (stat == "success") {
+	                            jsonObj = jQuery.parseJSON(xmldata.responseText, convertDates = true);
+	                            this.thegrid.addJSONData(jsonObj);
+	                        }
+	                    }
+	                })
+	            },
+	            width: '1800',
+	            height: '500',
+	            rowNum: 10,
+	            //rowList: [10, 20, 30, 40],
+	            pager: '#jpGridPager',
+	            sortname: 'Seq',
+	            sortorder: "desc",
+	            //rowTotal: -1,
+	            loadError: function (xhr, st, err) {
+	                alert("Type: " + st + "; Response: " + xhr.status + " " + xhr.statusText);
+	            },
+	            //gridview: true,
+	            viewrecords: true,
+	            pgbuttons: true,
+	            jsonReader: { repeatitems: false, id: "0" },
+	            //autowidth: true,
+	            multiselect: true,
+	            colModel: [
+				{ name: 'Seq', index: 'Seq', label: 'SEQ', width: 50, hidden: false, sortable: false, align: "center" },
+				{ name: 'ServerName', index: 'ServerName', label: 'Host Name', width: 100, sortable: false, align: "center" },
+				{ name: 'EquipTypeCode', index: 'EquipTypeCode', label: '장비구분.', width: 100, sortable: false, align: "center" },
+				{ name: 'IdcName', index: 'IdcName', label: 'IDC', width: 100, sortable: false, align: "center" },
+				{ name: 'RackLocationCode', index: 'RackLocationCode', label: 'RACK위치', width: 100, sortable: false, align: "center" },
+				{ name: 'VenderCode', index: 'VenderCode', label: 'Vendor', width: 100, sortable: false, align: "center" },
+				{ name: 'ProductName', index: 'ProductName', label: '제품', width: 100, sortable: false, align: "center" },
+				{ name: 'Content', index: 'Content', label: '특이사항', width: 200, sortable: false, align: "center" }
+				]
+
+	        });
+	        $("#jqGridList").jqGrid('navGrid', '#jpGridPager', { edit: false, add: false, del: false, search: false });
+
+	    });
+
+	    $(document).ready(function () {
+	        EtcList.Init();
+	    });
+
+
+		
+	</script>	
+}
+<h2><i class="fa fa-file-text fa-fw"></i>기타 조회</h2>
+@*@using (Html.BeginForm("EtcList", "Asset", FormMethod.Post, new { name = "frmEtcList", id = "frmEtcList" }))
+{
+	@Html.TextBox("searchText", "", new { id = "txtSearchText", @class = "search" })
+}*@
+<form action="javascript:EtcList.Search();" name = "frmEtcList" id="frmEtcList" method="post">
+    @*@Html.TextBox("searchText", "", new { @class = "search" })*@
+	
+	<input type="text" id="searchText" name="searchText" placeholder="검색" value="검색" onfocus="this.value='';this.onfocus='';" class="search">
+	
+	<select id="searchType"  class="select-main">
+        <option value="0">
+            select
+        </option>
+        <option value="1">
+            IDC
+        </option>
+    </select>
+</form>
+
+<section>
+	<div class="table-scroll">
+	<table class="table-1 cell-separate" id="jqGridList">
+	</table>
+	<div id="jpGridPager"></div>
+	</div>
+	<div class="button-wrap">
+		<a href="javascript:;" id="btnEtcAdd" class="button-main">추가</a>
+		<a href="javascript:;" id="btnEtcEdit" class="button-main">편집</a>
+		<a href="javascript:;" id="btnEtcDel" class="button-main">삭제</a>
+		<a href="javascript:;" id="btnEtcXlsDownload" class="button-sub"><i class="fa fa-download fa-fw"></i>Download</a>
+		<a href="javascript:;" id="btnEtcXlsUpload" class="button-sub"><i class="fa fa-upload fa-fw"></i><input type="file" class="hidden"/>Upload</a>
+	</div>
+</section>
+

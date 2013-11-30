@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldMappings>
+  <!--<FieldMapping name="ProjectT">
+    <Item typeFieldName="ProjectNo" dataColumnName="PROJECT_NO" tableAlias="PROJECT"/>
+    <Item typeFieldName="UserId" dataColumnName="USER_ID" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectDomain" dataColumnName="PROJECT_DOMAIN" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectBcNo" dataColumnName="PROJECT_BC_NO" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectType" dataColumnName="PROJECT_TYPE" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectName" dataColumnName="PROJECT_NAME" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectPmName" dataColumnName="PROJECT_PM_NAME" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectStartDate" dataColumnName="PROJECT_START_DATE" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectPlanLTS" dataColumnName="PROJECT_PLAN_LTS" tableAlias="PROJECT"/>
+    <Item typeFieldName="ProjectLTS" dataColumnName="PROJECT_LTS" tableAlias="PROJECT"/>
+    <Item typeFieldName="Status" dataColumnName="STATUS" tableAlias="PROJECT"/>
+  </FieldMapping>
+
+  <FieldMapping name="TeamT">
+    <Item typeFieldName="TeamCode" dataColumnName="DEPT_CODE" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="TeamName" dataColumnName="DEPT_NAME" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="HeadCode" dataColumnName="UPPER_DEPT_CODE" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="HeadName" dataColumnName="UPPER_DEPT_NAME" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="TeamGubun" dataColumnName="DEPT_LEVEL" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="ManagerId" dataColumnName="BUSE_JANG" tableAlias="V_EMSTB_DEPT"/>
+    <Item typeFieldName="ManagerName" dataColumnName="NAME" tableAlias="V_EMSTB_UNION_STAFF"/>
+    
+    -->
+  <!--<Item typeFieldName="TeamCode" dataColumnName="BUSE_CODE" tableAlias="pay91m"/>
+    <Item typeFieldName="TeamName" dataColumnName="BUSE_NAME" tableAlias="pay91m"/>
+    <Item typeFieldName="HeadCode" dataColumnName="HEAD_BUSE" tableAlias="pay91m"/>
+    <Item typeFieldName="HeadName" dataColumnName="BUSE_PNAME" tableAlias="pay91m"/>
+    <Item typeFieldName="TeamGubun" dataColumnName="BUSE_GUBUN" tableAlias="pay91m"/>
+    <Item typeFieldName="ManagerId" dataColumnName="BUSE_JANG" tableAlias="pay91m"/>
+    <Item typeFieldName="ManagerName" dataColumnName="K_NAME" tableAlias="pay01m"/>-->
+  <!--
+    
+  </FieldMapping>-->
+
+  <!--<FieldMapping name="CategoryT">
+    <Item typeFieldName="LCategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="MCategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="SCategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="CategoryLevel" dataColumnName="CATEGORY_LEVEL" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="CategoryName" dataColumnName="CATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="LCategoryName" dataColumnName="LCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="MCategoryName" dataColumnName="MCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="SCategoryName" dataColumnName="SCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ActivityName" dataColumnName="ACTIVITY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="Status" dataColumnName="STATUS" tableAlias="CATEGORY_ACTIVITY"/>
+  </FieldMapping>
+
+  <FieldMapping name="UserActivityT">
+    <Item typeFieldName="UserActivityNo" dataColumnName="USER_ACTIVITY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="UserId" dataColumnName="USER_ID" tableAlias="CATEGORY_ACTIVITY"/>
+
+    <Item typeFieldName="ActivityDate" dataColumnName="ACTIVITY_DATE" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ProjectNo" dataColumnName="PROJECT_NO" tableAlias="CATEGORY_ACTIVITY"/>
+
+    <Item typeFieldName="LCategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="MCategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="SCategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="CATEGORY_ACTIVITY"/>
+    
+    <Item typeFieldName="CategoryLevel" dataColumnName="CATEGORY_LEVEL" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="CategoryName" dataColumnName="CATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="LCategoryName" dataColumnName="LCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="MCategoryName" dataColumnName="MCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="SCategoryName" dataColumnName="SCATEGORY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ActivityName" dataColumnName="ACTIVITY_NAME" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="ResourceHour" dataColumnName="RESOURCE_HOUR" tableAlias="CATEGORY_ACTIVITY"/>
+    -->
+  <!--<Item typeFieldName="IsDD" dataColumnName="DUP_YN" tableAlias="USER_ACTIVITY"/>-->
+  <!--
+    <Item typeFieldName="TeamCode" dataColumnName="BUSE_CODE" tableAlias="CATEGORY_ACTIVITY"/>
+    <Item typeFieldName="Status" dataColumnName="STATUS" tableAlias="CATEGORY_ACTIVITY"/>
+  </FieldMapping>-->
+
+  <FieldMapping name="UserT">
+    <Item typeFieldName="LoginId" dataColumnName="LOGIN_ID" tableAlias="ASSET_USER"/>
+    <Item typeFieldName="LastLoginDate" dataColumnName="LAST_LOGIN_DATE" tableAlias="ASSET_USER"/>
+    <Item typeFieldName="IsDeleted" dataColumnName="DEL_YN" tableAlias="ASSET_USER"/>
+    <Item typeFieldName="DeletedDate" dataColumnName="DEL_DATE" tableAlias="ASSET_USER"/>
+    <Item typeFieldName="InsertUser" dataColumnName="INS_OPRT" tableAlias="ASSET_USER"/>
+    <Item typeFieldName="InsertDate" dataColumnName="INS_DATE" tableAlias="ASSET_USER"/>
+  </FieldMapping>
+
+  <!--<FieldMapping name="ReportT">
+    <Item typeFieldName="Code" dataColumnName="CODE" tableAlias="PAY01M"/>
+    <Item typeFieldName="CodeName" dataColumnName="CODE_NAME" tableAlias="PAY01M"/>
+		<Item typeFieldName="TCode" dataColumnName="TCODE" tableAlias="PAY01M"/>
+		<Item typeFieldName="TCodeName" dataColumnName="TCODE_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="LCategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="PAY01M"/>
+    <Item typeFieldName="MCategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="PAY01M"/>
+    <Item typeFieldName="SCategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="PAY01M"/>
+    <Item typeFieldName="LCategoryName" dataColumnName="LCATEGORY_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="MCategoryName" dataColumnName="MCATEGORY_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="SCategoryName" dataColumnName="SCATEGORY_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="ResourceHour" dataColumnName="RESOURCE_HOUR" tableAlias="PAY01M"/>
+		<Item typeFieldName="UserCount" dataColumnName="USER_COUNT" tableAlias="PAY01M"/>
+  </FieldMapping>-->
+
+  <!--<FieldMapping name="AssignedProjectT">
+    <Item typeFieldName="UserId" dataColumnName="USER_ID" tableAlias="PAY01M"/>
+    <Item typeFieldName="ProjectBcNo" dataColumnName="PROJECT_BC_NO" tableAlias="PAY01M"/>
+    <Item typeFieldName="Role" dataColumnName="ROLE" tableAlias="PAY01M"/>
+    <Item typeFieldName="ManDay" dataColumnName="MANDAY" tableAlias="PAY01M"/>
+  </FieldMapping>-->
+
+  <!--<FieldMapping name="ServerT">
+    <Item typeFieldName="ServerIP" dataColumnName="SERVER_IP" tableAlias="SERVER_INFO"/>
+  </FieldMapping>-->
+
+  <FieldMapping name="HolidayT">
+    <Item typeFieldName="HolidayDate" dataColumnName="HOLI_DT" tableAlias="SCH02M"/>
+    <Item typeFieldName="HolidayName" dataColumnName="HOLI_NAME" tableAlias="SCH02M"/>
+    <!--<Item typeFieldName="HolidayDate" dataColumnName="HOLIDAY_DATE" tableAlias="pd_track_kholiday"/>
+		<Item typeFieldName="HolidayName" dataColumnName="HOLIDAY_NAME" tableAlias="pd_track_kholiday"/>-->
+  </FieldMapping>
+
+
+  <!--20120429 스킬셋 추가-->
+  <FieldMapping name="SkillSetT">
+    <Item typeFieldName="SkillLcode" dataColumnName="SKILL_LCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillMcode" dataColumnName="SKILL_MCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillScode" dataColumnName="SKILL_SCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillDcode" dataColumnName="SKILL_DCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillLname" dataColumnName="SKILL_LNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillMname" dataColumnName="SKILL_MNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillSname" dataColumnName="SKILL_SNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillDname" dataColumnName="SKILL_DNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillCodeLevel" dataColumnName="SKILL_CODE_LEVEL" tableAlias="SKILL_SET"/>
+  </FieldMapping>
+
+  <FieldMapping name="UserSkillT">
+    <Item typeFieldName="UserId" dataColumnName="USER_ID" tableAlias="USER_SKILL"/>
+    <Item typeFieldName="UserName" dataColumnName="USER_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="SkillDcode" dataColumnName="SKILL_DCODE" tableAlias="USER_SKILL"/>
+    <Item typeFieldName="SkillLevel" dataColumnName="SKILL_LEVEL" tableAlias="USER_SKILL"/>
+  </FieldMapping>
+
+  <FieldMapping name="SkillAndUserT">
+    <Item typeFieldName="UserId" dataColumnName="USER_ID" tableAlias="USER_SKILL"/>
+    <Item typeFieldName="SkillLcode" dataColumnName="SKILL_LCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillMcode" dataColumnName="SKILL_MCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillScode" dataColumnName="SKILL_SCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillDcode" dataColumnName="SKILL_DCODE" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillLname" dataColumnName="SKILL_LNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillMname" dataColumnName="SKILL_MNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillSname" dataColumnName="SKILL_SNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillDname" dataColumnName="SKILL_DNAME" tableAlias="SKILL_SET"/>
+    <Item typeFieldName="SkillLevel" dataColumnName="SKILL_LEVEL" tableAlias="USER_SKILL"/>
+    <Item typeFieldName="SkillCodeLevel" dataColumnName="SKILL_CODE_LEVEL" tableAlias="SKILL_SET"/>
+  </FieldMapping>
+
+
+  <FieldMapping name="WeeklyUserActivityT">
+    <Item typeFieldName="ProjectNo" dataColumnName="PROJECT_NO" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="ProjectName" dataColumnName="PROJECT_NAME" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="MCategoryName" dataColumnName="MCATEGORY_NAME" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="SCategoryName" dataColumnName="SCATEGORY_NAME" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="ActivityName" dataColumnName="ACTIVITY_NAME" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="LCategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="MCategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="SCategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="ActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Sun" dataColumnName="SUN" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Mon" dataColumnName="MON" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Tue" dataColumnName="TUE" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Wed" dataColumnName="WED" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Thu" dataColumnName="THU" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Fri" dataColumnName="FRI" tableAlias="USER_ACTIVITY"/>
+    <Item typeFieldName="Sat" dataColumnName="SAT" tableAlias="CATEGORY_ACTIVITY"/>
+  </FieldMapping>
+
+  <FieldMapping name="HRMSProjectT">
+    <Item typeFieldName="ID" dataColumnName="PROJECT_ID" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="HQ" dataColumnName="PROJECT_TYPE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ScopeID" dataColumnName="PROJECT_SCOPE_ID" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ProjectName" dataColumnName="PROJECT_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="PmName" dataColumnName="PM_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Domain" dataColumnName="DOMAIN" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="DomainTeam" dataColumnName="DOMAIN_TEAM" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="PL" dataColumnName="PL" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="TotMD" dataColumnName="TOTAL_RESOURCE" tableAlias="HRMS_PROJECT"/>
+
+    <Item typeFieldName="LTS" dataColumnName="LTS" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Phase" dataColumnName="ACTIVITY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Status" dataColumnName="PROJECT_STATUS" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Description" dataColumnName="DESC" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="InsDate" dataColumnName="REG_DT" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="UpdDate" dataColumnName="CHG_DT" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Casu" dataColumnName="PROJECT_ORDER" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="IsDeleted" dataColumnName="DEL_YN" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="LcategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="McategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ScategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ActivityName" dataColumnName="ACTIVITY_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="StartDate" dataColumnName="START_DATE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="EndDate" dataColumnName="END_DATE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="STName" dataColumnName="ST_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="HQName" dataColumnName="HQ_NAME" tableAlias="HRMS_PROJECT"/>
+
+    <Item typeFieldName="PMUserID" dataColumnName="PM_USER_ID" tableAlias="PAY01M"/>
+    <Item typeFieldName="DomainUserID" dataColumnName="DOMAIN_USER_ID" tableAlias="PAY01M"/>
+    <Item typeFieldName="DomainTeamCode" dataColumnName="DOMAIN_BUSE_CODE" tableAlias="PAY91M"/>
+    <Item typeFieldName="PLUserID" dataColumnName="PL_USER_ID" tableAlias="PAY01M"/>
+  </FieldMapping>
+
+  <FieldMapping name="HRMSProjectResourceT">
+    <Item typeFieldName="ID" dataColumnName="PROJECT_RESOURCE_ID" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="ProjectID" dataColumnName="PROJECT_ID" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="BuseCode" dataColumnName="BUSE_CODE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="BuseName" dataColumnName="BUSE_NAME" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="UserID" dataColumnName="USER_ID" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="UserName" dataColumnName="USER_NAME" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="StartDate" dataColumnName="START_DATE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="EndDate" dataColumnName="END_DATE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="Description" dataColumnName="DESC" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="LTS" dataColumnName="LTS" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="IsPL" dataColumnName="PL_YN" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="IsDD" dataColumnName="DUP_YN" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="MD" dataColumnName="RESOURCE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="Phase" dataColumnName="ACTIVITY_NO" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="ResourcePhase" dataColumnName="RESOURCE_PHASE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="DelYN" dataColumnName="DEL_YN" tableAlias="HRMS_PROJECT_RESOURCE"/>
+
+  </FieldMapping>
+
+  <FieldMapping name="EnumsT">
+    <Item typeFieldName="ID" dataColumnName="ID" tableAlias="ENUMS"/>
+    <Item typeFieldName="EnumName" dataColumnName="ENUM_NAME" tableAlias="ENUMS"/>
+    <Item typeFieldName="EnumKey" dataColumnName="ENUM_KEY" tableAlias="ENUMS"/>
+    <Item typeFieldName="EnumValue" dataColumnName="ENUM_VALUE" tableAlias="ENUMS"/>
+  </FieldMapping>
+
+  <FieldMapping name="ReportingCategoryT">
+    <Item typeFieldName="LTypeID" dataColumnName="LTYPE_ID" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="STypeID" dataColumnName="STYPE_ID" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="SCategoryID" dataColumnName="SCATEGORY_ID" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="TypeLevel" dataColumnName="TYPE_LEVEL" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="TypeName" dataColumnName="TYPE_NAME" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="LTypeName" dataColumnName="LTYPE_NAME" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="STypeName" dataColumnName="STYPE_NAME" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="Status" dataColumnName="STATUS" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="InsDate" dataColumnName="INS_DATE" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="InsUserID" dataColumnName="INS_USER_ID" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="UpdDate" dataColumnName="UPD_DATE" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="UpdUserID" dataColumnName="UPD_USER_ID" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="Description" dataColumnName="DESCRIPTION" tableAlias="REPORTING_CATEGORY"/>
+    <Item typeFieldName="Remark" dataColumnName="REMARK" tableAlias="REPORTING_CATEGORY"/>
+  </FieldMapping>
+
+  <FieldMapping name="HRMSProjectTAndResourceT">
+    <Item typeFieldName="ID" dataColumnName="PROJECT_ID" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="HQ" dataColumnName="PROJECT_TYPE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="HQName" dataColumnName="HQ_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ScopeID" dataColumnName="PROJECT_SCOPE_ID" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ProjectName" dataColumnName="PROJECT_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="PmName" dataColumnName="PM_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Domain" dataColumnName="DOMAIN" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="DomainTeam" dataColumnName="DOMAIN_TEAM" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="PL" dataColumnName="PL" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="TotMD" dataColumnName="TOTAL_RESOURCE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="LTS" dataColumnName="LTS" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Phase" dataColumnName="PROJECT_STATUS" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Status" dataColumnName="PROJECT_STATUS" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ProjectDescription" dataColumnName="PROJECT_DESCRIPTION" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="InsDate" dataColumnName="REG_DT" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="UpdDate" dataColumnName="CHG_DT" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="Casu" dataColumnName="PROJECT_ORDER" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="IsDeleted" dataColumnName="DEL_YN" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="LcategoryNo" dataColumnName="LCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="McategoryNo" dataColumnName="MCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ScategoryNo" dataColumnName="SCATEGORY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="ActivityName" dataColumnName="ACTIVITY_NAME" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="StartDate" dataColumnName="START_DATE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="EndDate" dataColumnName="END_DATE" tableAlias="HRMS_PROJECT"/>
+    <Item typeFieldName="PMUserID" dataColumnName="PM_USER_ID" tableAlias="PAY01M"/>
+    <Item typeFieldName="DomainUserID" dataColumnName="DOMAIN_USER_ID" tableAlias="PAY01M"/>
+    <Item typeFieldName="DomainTeamCode" dataColumnName="DOMAIN_BUSE_CODE" tableAlias="PAY91M"/>
+    <Item typeFieldName="PLUserID" dataColumnName="PL_USER_ID" tableAlias="PAY01M"/>
+
+
+    <Item typeFieldName="ResourceID" dataColumnName="RESOURCE_ID" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="UserID" dataColumnName="USER_ID" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <!--<Item typeFieldName="UserName" dataColumnName="USER_NAME" tableAlias="HRMS_PROJECT_RESOURCE"/>-->
+    <Item typeFieldName="BuseCode" dataColumnName="BUSE_CODE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <!--<Item typeFieldName="BuseName" dataColumnName="BUSE_NAME" tableAlias="HRMS_PROJECT_RESOURCE"/>-->
+    <Item typeFieldName="ResourceStartDate" dataColumnName="RESOURCE_START_DATE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="ResourceEndDate" dataColumnName="RESOURCE_END_DATE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="ResourceDescription" dataColumnName="RESOURCE_DESCRIPTION" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="IsPL" dataColumnName="PL_YN" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="IsDD" dataColumnName="DUP_YN" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="MD" dataColumnName="RESOURCE_MD" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="UserName" dataColumnName="USER_NAME" tableAlias="PAY01M"/>
+    <Item typeFieldName="BuseName" dataColumnName="BUSE_NAME" tableAlias="PAY91M"/>
+    <Item typeFieldName="ResourceActivityNo" dataColumnName="ACTIVITY_NO" tableAlias="HRMS_PROJECT_RESOURCE"/>
+    <Item typeFieldName="ResourcePhase" dataColumnName="RESOURCE_PHASE" tableAlias="HRMS_PROJECT_RESOURCE"/>
+
+  </FieldMapping>
+
+  <FieldMapping name="HRMSWeeklyReportT">
+    <Item typeFieldName="ID" dataColumnName="WEEKLY_REPORT_ID" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="WeekNumber" dataColumnName="WEEK_ORDER" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="LTSNotice" dataColumnName="LTS_NOTICE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="LTSNoticeName" dataColumnName="LTS_NOTICE_NAME" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="LTSNoticeDate" dataColumnName="LTS_NOTICE_DATE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="Comments" dataColumnName="COMMENTS" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="CommentsName" dataColumnName="COMMENTS_NAME" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="CommentsDate" dataColumnName="COMMENTS_DATE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="HotIssue" dataColumnName="HOT_ISSUE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="HotIssueName" dataColumnName="HOT_ISSUE_NAME" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="HotIssueDate" dataColumnName="HOT_ISSUE_DATE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="InsDate" dataColumnName="INS_DATE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="InsUserID" dataColumnName="INS_USER_ID" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="UserName" dataColumnName="USER_NAME" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="BuseCode" dataColumnName="BUSE_CODE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="UpdDate" dataColumnName="UPD_DATE" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="UpdUserID" dataColumnName="UPD_USER_ID" tableAlias="HRMS_WEEKLY_REPORT"/>
+    <Item typeFieldName="HeadCode" dataColumnName="HEAD_CODE" tableAlias="HRMS_WEEKLY_REPORT"/>
+
+  </FieldMapping>
+  <FieldMapping name="HRMSManagerT">
+    <Item typeFieldName="ID" dataColumnName="HRMS_Manager_ID" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="UserID" dataColumnName="USER_ID" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="BuseCode" dataColumnName="BUSE_CODE" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="HeadCode" dataColumnName="HEAD_CODE" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="Level" dataColumnName="LEVEL" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="InsUserID" dataColumnName="INS_USER_ID" tableAlias="HRMS_MANAGER"/>
+    <Item typeFieldName="UpdUserID" dataColumnName="UPD_USER_ID" tableAlias="HRMS_MANAGER"/>
+  </FieldMapping>
+
+  <FieldMapping name="HRMSImportProjectT">
+    <Item typeFieldName="ID" dataColumnName="IMPORT_HRMS_PROJECT_ID" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="HQ" dataColumnName="PROJECT_TYPE_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="HQID" dataColumnName="PROJECT_TYPE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="ScopeID" dataColumnName="PROJECT_SCOPE_ID" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="ProjectName" dataColumnName="PROJECT_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PMName" dataColumnName="PM_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PMTeamCode" dataColumnName="PM_TEAM_CODE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PMTeamName" dataColumnName="PM_TEAM_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PMUserID" dataColumnName="PM_USER_ID" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="DomainName" dataColumnName="DOMAIN_USER_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="DomainTeamCode" dataColumnName="DOMAIN_TEAM_CODE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="DomainTeamName" dataColumnName="DOMAIN_TEAM_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="DomainUserID" dataColumnName="DOMAIN_USER_ID" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="StartDate" dataColumnName="START_DATE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="EndDate" dataColumnName="END_DATE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="TotalMD" dataColumnName="TOTAL_RESOURCE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="LTS" dataColumnName="LTS" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PLYN" dataColumnName="PL_YN" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="DUPYN" dataColumnName="DUP_YN" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDName" dataColumnName="PD_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDTeamCode" dataColumnName="PD_TEAM_CODE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDUserID" dataColumnName="PD_USER_ID" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDTeamName" dataColumnName="PD_TEAM_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDStartDate" dataColumnName="PD_START_DATE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDEndDate" dataColumnName="PD_END_DATE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDMD" dataColumnName="PD_RESOURCE" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="status" dataColumnName="PROJECT_STATUS" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="StatusCode" dataColumnName="ACTIVITY_NO" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="StatusName" dataColumnName="ACTIVITY_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="Sequence" dataColumnName="PROJECT_ORDER" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDActivityName" dataColumnName="PD_ACTIVITY_NAME" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PDActivityNo" dataColumnName="PD_ACTIVITY_NO" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="PassYN" dataColumnName="PASS_YN" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="Description" dataColumnName="DESC" tableAlias="IMPORT_HRMS_PROJECT"/>
+    <Item typeFieldName="LCategoryNo" dataColumnName="LCategory_No" tableAlias="IMPORT_HRMS_PROJECT"/>
+  </FieldMapping>
+  <FieldMapping name="AssetCommonCodeT">
+    <Item typeFieldName="AssetGroupType" dataColumnName="ASSET_GROUP_TYPE" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="AssetType" dataColumnName="ASSET_TYPE" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="AssetCode" dataColumnName="ASSET_CODE" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="CodeName" dataColumnName="CODE_NAME" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="CodeDesc" dataColumnName="CODE_DESC" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="InsOprt" dataColumnName="INS_OPRT" tableAlias="ASSET_COMMON_CODE"/>
+    <Item typeFieldName="InsDate" dataColumnName="INS_DATE" tableAlias="ASSET_COMMON_CODE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetIdcCodeT">
+    <Item typeFieldName ="IdcCode"     dataColumnName ="IDC_CODE" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="LClassCode" dataColumnName ="LCLASS_CODE" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="LClassName"     dataColumnName ="LCLASS_NAME" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="SClassCode"     dataColumnName ="SCLASS_CODE" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="SClassName"     dataColumnName ="SCLASS_NAME" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="PartRoomYn"     dataColumnName ="PART_ROOM_YN" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="IdcOperFloor"     dataColumnName ="IDC_OPER_FLOOR" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="InsOprt"     dataColumnName ="INS_OPRT" tableAlies="ASSET_IDC_CODE"/>
+    <Item typeFieldName ="InsDate"     dataColumnName ="INS_DATE" tableAlies="ASSET_IDC_CODE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetRackCodeT">
+    <Item typeFieldName ="IdcCode"               dataColumnName ="IDC_CODE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackCode"              dataColumnName ="RACK_CODE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackName"             dataColumnName ="RACK_NAME" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackColLocationValue" dataColumnName ="RACK_COL_LOCATION_VALUE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackColCode"          dataColumnName ="RACK_COL_CODE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackLocationValue"    dataColumnName ="RACK_LOCATION_VALUE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackLocationCode"    dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="RackSize"             dataColumnName ="RACK_SIZE" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="PillarYn"             dataColumnName ="PILLAR_YN" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="InsOprt"              dataColumnName ="INS_OPRT" tableAlies="ASSET_RACK_CODE"/>
+    <Item typeFieldName ="InsDate"              dataColumnName ="INS_DATE" tableAlies="ASSET_RACK_CODE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetServerVenderCodeT">
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="VenderName"         dataColumnName ="VENDER_NAME" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="ProcessCnt"         dataColumnName ="PROCESS_CNT" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="CpuTypeName"        dataColumnName ="CPU_TYPE_NAME" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="TotalCoreCnt"       dataColumnName ="TOTAL_CORE_CNT" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="MemorySizeName"     dataColumnName ="MEMORY_SIZE_NAME" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="ServerCnt"          dataColumnName ="SERVER_CNT" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="InsOprt"            dataColumnName ="INS_OPRT" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_SERVER_VENDER_CODE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetNetworkVenderCodeT">
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+    <Item typeFieldName ="VenderName"         dataColumnName ="VENDER_NAME" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+    <Item typeFieldName ="ServerCnt"          dataColumnName ="SERVER_CNT" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+    <Item typeFieldName ="InsOprt"            dataColumnName ="INS_OPRT" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_NETWORK_VENDER_CODE"/>
+  </FieldMapping>
+  <FieldMapping name ="AssetStorageVenderCodeT">
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+    <Item typeFieldName ="VenderName"         dataColumnName ="VENDER_NAME" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+    <Item typeFieldName ="ServerCnt"          dataColumnName ="SERVER_CNT" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+    <Item typeFieldName ="InsOprt"            dataColumnName ="INS_OPRT" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_STORAGE_VENDER_CODE"/>
+  </FieldMapping>
+  <FieldMapping name ="AssetEtcVenderCodeT">
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_ETC_VENDER_CODE"/>
+    <Item typeFieldName ="VenderName"         dataColumnName ="VENDER_NAME" tableAlies="ASSET_ETC_VENDER_CODE"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_ETC_VENDER_CODE"/>
+    <Item typeFieldName ="ServerCnt"          dataColumnName ="SERVER_CNT" tableAlies="ASSET_ETC_VENDER_CODE"/>
+    <Item typeFieldName ="InsOprt"            dataColumnName ="INS_OPRT" tableAlies="ASSET_ETC_VENDER_CODE"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_ETC_VENDER_CODE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetServerInfoT">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="TaskCode"         dataColumnName ="TASK_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServiceCode"        dataColumnName ="SERVICE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="OsCode"        dataColumnName ="OS_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_SERVER_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetServerInfoEx1T">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="TaskCode"         dataColumnName ="TASK_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServiceCode"        dataColumnName ="SERVICE_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="OsCode"        dataColumnName ="OS_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="EquipTypeName"        dataColumnName ="EQUIP_TYPE_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="IdcName"        dataColumnName ="IDC_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="SiteName"        dataColumnName ="SITE_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="TaskName"        dataColumnName ="TASK_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServiceName"        dataColumnName ="SERVICE_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RackLocationCode"        dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="OsName"        dataColumnName ="OS_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="VenderName"        dataColumnName ="VENDER_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ProcessCnt"        dataColumnName ="PROCESS_CNT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="CpuTypeName"        dataColumnName ="CPU_TYPE_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="TotalCoreCnt"        dataColumnName ="TOTAL_CORE_CNT" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="MemorySizeName"        dataColumnName ="MEMORY_SIZE_NAME" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ServerIp"        dataColumnName ="SERVER_IP" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="ExpireDate"        dataColumnName ="EXPIRE_DATE" tableAlies="ASSET_SERVER_INFO"/>
+    <Item typeFieldName ="RemainDay"        dataColumnName ="REMAIN_DAY" tableAlies="ASSET_SERVER_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name="AssetNetworkInfoT">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="OsCode"        dataColumnName ="OS_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name="AssetNetworkInfoEx1T">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="OsCode"        dataColumnName ="OS_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="EquipTypeName"        dataColumnName ="EQUIP_TYPE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="IdcName"        dataColumnName ="IDC_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SiteName"        dataColumnName ="SITE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackLocationCode"        dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="VenderName"        dataColumnName ="VENDER_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ProcessCnt"        dataColumnName ="PROCESS_CNT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="CpuTypeName"        dataColumnName ="CPU_TYPE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="TotalCoreCnt"        dataColumnName ="TOTAL_CORE_CNT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="MemorySizeName"        dataColumnName ="MEMORY_SIZE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ServerIp"        dataColumnName ="SERVER_IP" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ExpireDate"        dataColumnName ="EXPIRE_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RemainDay"        dataColumnName ="REMAIN_DAY" tableAlies="ASSET_NETWORK_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name="AssetNetworkInfoEx2T">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="OsCode"        dataColumnName ="OS_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="EquipTypeName"        dataColumnName ="EQUIP_TYPE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="IdcName"        dataColumnName ="IDC_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="SiteName"        dataColumnName ="SITE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RackLocationCode"        dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="VenderName"        dataColumnName ="VENDER_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ProcessCnt"        dataColumnName ="PROCESS_CNT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="CpuTypeName"        dataColumnName ="CPU_TYPE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="TotalCoreCnt"        dataColumnName ="TOTAL_CORE_CNT" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="MemorySizeName"        dataColumnName ="MEMORY_SIZE_NAME" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ServerIp"        dataColumnName ="SERVER_IP" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="ExpireDate"        dataColumnName ="EXPIRE_DATE" tableAlies="ASSET_NETWORK_INFO"/>
+    <Item typeFieldName ="RemainDay"        dataColumnName ="REMAIN_DAY" tableAlies="ASSET_NETWORK_INFO"/>
+  </FieldMapping>
+  <FieldMapping name="AssetIpGroupT">
+    <Item typeFieldName ="GroupIp"         dataColumnName ="GROUP_IP" tableAlies="ASSET_IP_GROUP"/>
+    <Item typeFieldName ="IpClassCode"         dataColumnName ="I_PCLASS_CODE" tableAlies="ASSET_IP_GROUP"/>
+    <Item typeFieldName ="ExposeIpYn"        dataColumnName ="EXPOSE_IP_YN" tableAlies="ASSET_IP_GROUP"/>
+    <Item typeFieldName ="InsOprt"          dataColumnName ="INS_OPRT" tableAlies="ASSET_IP_GROUP"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_IP_GROUP"/>
+  </FieldMapping>
+
+  <FieldMapping name="AssetIpInfoT">
+    <Item typeFieldName ="ServerIp"         dataColumnName ="SERVER_IP" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="GroupIp"         dataColumnName ="GROUP_IP" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ServerName"        dataColumnName ="SERVER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="AssignDate"          dataColumnName ="ASSIGN_DATE" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ReturnDate"            dataColumnName ="RETURN_DATE" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="OldServerName"         dataColumnName ="OLD_SERVER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ManagerName"        dataColumnName ="MANAGER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="InsOprt"          dataColumnName ="INS_OPRT" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_IP_INFO"/>
+  </FieldMapping>
+  <FieldMapping name="AssetIpInfoEX1T">
+    <Item typeFieldName ="ServerIp"         dataColumnName ="SERVER_IP" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="GroupIp"         dataColumnName ="GROUP_IP" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ServerName"        dataColumnName ="SERVER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="AssignDate"          dataColumnName ="ASSIGN_DATE" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ReturnDate"            dataColumnName ="RETURN_DATE" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="OldServerName"         dataColumnName ="OLD_SERVER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="ManagerName"        dataColumnName ="MANAGER_NAME" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="InsOprt"          dataColumnName ="INS_OPRT" tableAlies="ASSET_IP_INFO"/>
+    <Item typeFieldName ="InsDate"            dataColumnName ="INS_DATE" tableAlies="ASSET_IP_INFO"/>
+    <item typeFieldName="IpClassName" dataCoumnName ="IP_CLASS_NAME" tableAlies="ASSET_IP_INFO"/>
+    <item typeFieldName="ExposeIpYn" dataCoumnName ="EXPOSE_IP_YN" tableAlies="ASSET_IP_INFO"/>
+    <item typeFieldName="IpClassCode" dataCoumnName ="IP_CLASS_CODE" tableAlies="ASSET_IP_INFO"/>
+  </FieldMapping>
+  
+  <FieldMapping name ="AssetIpTypeT">
+    <Item typeFieldName ="IpClassCode" dataColumnName ="IP_CLASS_CODE" tableAlies="ASSET_IP_TYPE"/>
+    <Item typeFieldName ="IpClassName" dataColumnName ="IP_CLASS_NAME" tableAlies="ASSET_IP_TYPE"/>
+    <Item typeFieldName ="IpOprt" dataColumnName ="IP_OPRT" tableAlies="ASSET_IP_TYPE"/>
+    <Item typeFieldName ="IpDate" dataColumnName ="IP_DATE" tableAlies="ASSET_IP_TYPE"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetStorageInfoT">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetStorageInfoEx1T">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="BuyDate"         dataColumnName ="BUY_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SapNo"        dataColumnName ="SAP_NO" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SiteCode"         dataColumnName ="SITE_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="Qty"         dataColumnName ="QTY" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="HostName"        dataColumnName ="HOST_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="EquipTypeName"          dataColumnName ="EQUIP_TYPE_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ExpireDate"        dataColumnName ="EXPIRE_DATE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RemainDay"        dataColumnName ="REMAIN_DAY" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="IdcName"        dataColumnName ="IDC_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SiteName"        dataColumnName ="SITE_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="RackLocationCode"        dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="VenderName"        dataColumnName ="VENDER_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="SerialNo"            dataColumnName ="SERIAL_NO" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ProcessCnt"        dataColumnName ="PROCESS_CNT" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="ServerIp"        dataColumnName ="SERVER_IP" tableAlies="ASSET_STORAGE_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_STORAGE_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name="AssetEtcInfoT">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_ETC_INFO"/>
+  </FieldMapping>
+
+  <FieldMapping name ="AssetEtcInfoEx1T">
+    <Item typeFieldName ="Seq"         dataColumnName ="SEQ" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="EquipTypeCode"          dataColumnName ="EQUIP_TYPE_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="ServerName"            dataColumnName ="SERVER_NAME" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="IdcCode"          dataColumnName ="IDC_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="RackCode"            dataColumnName ="RACK_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="RackStartLocationValue"            dataColumnName ="RACK_START_LOCATION_VALUE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="VenderCode"         dataColumnName ="VENDER_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="Content"          dataColumnName ="CONTENT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelYn"            dataColumnName ="DEL_YN" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelDate"            dataColumnName ="DEL_DATE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="DelOprt"         dataColumnName ="DEL_OPRT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="InsOprt"         dataColumnName ="INS_OPRT" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="InsDate"        dataColumnName ="INS_DATE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="EquipTypeName"        dataColumnName ="EQUIP_TYPE_NAME" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="IdcName"        dataColumnName ="IDC_NAME" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="RackLocationCode"        dataColumnName ="RACK_LOCATION_CODE" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="VenderName"        dataColumnName ="VENDER_NAME" tableAlies="ASSET_ETC_INFO"/>
+    <Item typeFieldName ="ProductName"        dataColumnName ="PRODUCT_NAME" tableAlies="ASSET_ETC_INFO"/>
+  </FieldMapping>
+  
+  
+</FieldMappings>

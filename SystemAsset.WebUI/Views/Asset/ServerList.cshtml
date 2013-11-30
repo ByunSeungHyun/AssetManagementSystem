@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "ServerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head{
+	<style type="text/css">
+		.table-comment a:hover span.tooltip {position:absolute; z-index:3; display:inline; color:#222; border:4px solid #f3d18a; margin-top:32px; left:70%; line-height:1.2em;background-color:white; padding:12px; max-width:350px; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;}
+	</style>
+	<script language="javascript" type="text/javascript" src="~/Views/Asset/ServerList.js"></script>
+	<script language = "javascript">
+	    $(function () {
+	        $("#jqGridList").jqGrid({
+	            mtype: 'POST',
+	            datatype: function (postdata) {
+	                jQuery.ajax({
+	                    thegrid: this,
+	                    url: $("#jqGridList").getGridParam('url'),
+	                    type: 'POST',
+	                    data: $.JsonPostDataConverter(postdata),
+	                    dataType: "json",
+	                    complete: function (xmldata, stat) {
+	                        if (stat == "success") {
+	                            jsonObj = jQuery.parseJSON(xmldata.responseText, convertDates = true);
+	                            this.thegrid.addJSONData(jsonObj);
+	                        }
+	                    }
+	                })
+	            },
+	            width: '900px',
+	            height: '500',
+	            rowNum: 10,
+	            //rowList: [10, 20, 30, 40],
+	            pager: '#jpGridPager',
+	            sortname: 'Seq',
+	            sortorder: "desc",
+	            //rowTotal: -1,
+	            loadError: function (xhr, st, err) {
+	                alert("Type: " + st + "; Response: " + xhr.status + " " + xhr.statusText);
+	            },
+	            //gridview: true,
+	            viewrecords: true,
+	            pgbuttons: true,
+	            jsonReader: { repeatitems: false, id: "0" },
+	            //autowidth: true,
+	            multiselect: true,
+	            colModel: [
+				{ name: 'Seq', index: 'Seq', label: 'SEQ', width: 50, hidden: false, sortable: false, align: "center" },
+				{ name: 'SapNo', index: 'SapNo', label: 'SAP No.', width: 100, sortable: false, align: "center" },
+				{ name: 'ServerName', index: 'ServerName', label: 'Host Name', width: 100, sortable: false, align: "center" },
+				{ name: 'EquipTypeName', index: 'EquipTypeName', label: '장비구분.', width: 100, sortable: false, align: "center" },
+				{ name: 'BuyDate', index: 'BuyDate', label: '구입일자', width: 100, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'ExpireDate', index: 'ExpireDate', label: '만료일자', width: 100, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'RemainDay', index: 'RemainDay', label: '남은기간', width: 100, sortable: false, align: "center" },
+				{ name: 'SiteName', index: 'SiteName', label: 'SITE', width: 100, sortable: false, align: "center" },
+				{ name: 'TaskName', index: 'TaskName', label: '업무구분', width: 100, sortable: false, align: "center" },
+				{ name: 'ServiceName', index: 'ServiceName', label: '서비스', width: 100, sortable: false, align: "center" },
+				{ name: 'IdcName', index: 'IdcName', label: 'IDC', width: 100, sortable: false, align: "center" },
+				{ name: 'RackLocationCode', index: 'RackLocationCode', label: 'RACK위치', width: 100, sortable: false, align: "center" },
+				{ name: 'OsName', index: 'OsName', label: 'OS', width: 100, sortable: false, align: "center" },
+				{ name: 'VenderName', index: 'VenderName', label: 'Vendor', width: 100, sortable: false, align: "center" },
+				{ name: 'ProductName', index: 'ProductName', label: '제품', width: 100, sortable: false, align: "center" },
+				{ name: 'SerialNo', index: 'SerialNo', label: 'Serial No.', width: 100, sortable: false, align: "center" },
+				{ name: 'ProcessCnt', index: 'ProcessCnt', label: 'Process', width: 100, sortable: false, align: "center" },
+				{ name: 'CpuTypeName', index: 'CpuTypeName', label: 'CPU Type', width: 100, sortable: false, align: "center" },
+				{ name: 'TotalCoreCnt', index: 'TotalCoreCnt', label: 'Total Core', width: 100, sortable: false, align: "center" },
+				{ name: 'MemorySizeName', index: 'MemorySizeName', label: 'Memory', width: 100, sortable: false, align: "center" },
+				{ name: 'ServerIp', index: 'ServerIp', label: 'IP Address', width: 100, sortable: false, align: "center" },
+				{ name: 'Content', index: 'Content', label: '특이사항', width: 200, sortable: false, align: "center", classes: "table-comment" }
+				],
+	            gridComplete: function () {
+	                var list = jQuery('#jqGridList').jqGrid('getDataIDs');
+
+	                for (var i = 0; i < list.length; i++) {
+	                    var id = list[i];
+
+	                    var rowData = jQuery('#jqGridList').jqGrid('getRowData', id);
+	                    //alert(rowData.CpuTypeName);
+	                    //alert(rowData.Content.length);
+
+	                    if (rowData.Content.length > 0) {
+	                        var data = '<a href="#">*** <i class="fa fa-hand-o-up"></i><span class="tooltip">' + rowData.Content + '</span></a>';
+	                        
+	                        jQuery('#jqGridList').setCell(id, "Content", data, "");
+
+	                        //ar cl = ids[i];
+	                        //var redata = "<input style='height:22px;width:70px;' type='button' value='Delete' onclick='eventRow('" + id + "' );' />";
+	                        //jQuery("#list").jqGrid('setRowData', list[i], { Delete: de });
+	                    }
+	                }
+	            }
+
+	        });
+
+	        $("#jqGridList").jqGrid('navGrid', '#jpGridPager', { edit: false, add: false, del: false, search: false });
+
+	    });
+
+	    $(document).ready(function () {
+	        ServerList.Init();
+	    });
+		
+	</script>	
+}
+<h2><i class="fa fa-file-text fa-fw"></i>Server 조회</h2>
+@*@using (Html.BeginForm("ServerList", "Asset", FormMethod.Post, new { name = "frmServerList", id = "frmServerList" }))
+{
+	@Html.TextBox("searchText", "", new { id = "txtSearchText", @class = "search" })
+}*@
+<form action="javascript:ServerList.Search();" name = "frmEtcList" id="frmEtcList" method="post">
+	@*@Html.DropDownList("ProcStatus", (SelectList)ViewBag.ProcStatus, new { })*@
+	
+	<input type="text" id="searchText" name="searchText" placeholder="검색" onfocus="this.value='';this.onfocus='';" class="search">
+	
+</form>
+<section>
+	<div class="table-scroll">
+	<table class="table-1 cell-separate" id="jqGridList">
+	</table>
+	<div id="jpGridPager"></div>
+	</div>
+	<div class="button-wrap">
+		<a href="javascript:;" id="btnServerAdd" class="button-main">추가</a>
+		<a href="javascript:;" id="btnServerEdit" class="button-main">편집</a>
+		<a href="javascript:;" id="btnServerDel" class="button-main">삭제</a>
+		<a href="javascript:;" id="btnServerXlsDownload" class="button-sub"><i class="fa fa-download fa-fw"></i>Download</a>
+		<a href="javascript:;" id="btnServerXlsUpload" class="button-sub"><i class="fa fa-upload fa-fw"></i><input type="file" class="hidden"/>Upload</a>
+	</div>
+</section>
+

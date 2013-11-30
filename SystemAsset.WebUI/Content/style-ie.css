@@ -1,0 +1,20 @@
+
+table tr th {background:url('../images/bg1-ie.gif') repeat-x 0px 0px;}
+#ebayLogo {background:url('../images/ebay-logo.png') no-repeat 0px 0px;}
+.dash-point {margin-left:0;}
+.asset-point {margin-left:14.28%;}
+.code-point {margin-left:28.56%;}
+.user-point {margin-left:42.84%;}
+.ip-point {margin-left:57.12%;}
+.rack-point {margin-left:71.4%;}
+.set-point {margin-left:85.68%;}
+
+.table-scroll {overflow-x:scroll;}
+.cell-text {margin:12px 0px;}
+.hidden{margin-left:-182px;}
+input[type="file"] {outline:none; cursor:pointer; clip:rect(0 265px 22px 155px);}
+
+.button-main{background:url('../images/bg2-ie.gif') repeat-x 0px 0px;}
+.button-main:hover{background:url('../images/bg2-ie.gif') repeat-x 0px -30px;}
+.button-sub{background:url('../images/bg3-ie.gif') repeat-x 0px 0px;}
+.button-sub:hover{background:url('../images/bg3-ie.gif') repeat-x 0px -30px;}

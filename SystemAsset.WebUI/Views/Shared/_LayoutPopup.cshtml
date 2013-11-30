@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>@ViewBag.Title - 내 ASP.NET MVC 응용 프로그램</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta charset="euc-kr">
+		<meta http-equiv="X-UA-Compatible" content="IE=8; IE=EDGE" />
+		<META NAME="Generator" CONTENT="EditPlus">
+		<META NAME="Author" CONTENT="">
+		<META NAME="Keywords" CONTENT="">
+		<META NAME="Description" CONTENT="">
+		<link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")">
+		<link rel="stylesheet" href="@Url.Content("~/Content/font-awesome/css/font-awesome.min.css")">
+		<link rel='stylesheet' type='text/css' href='@Url.Content("~/Content/jquery.jqGrid/ui.jqgrid.css")' />
+		<link href="@Url.Content("~/Content/jquery-ui-1.8.2.custom.css")" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="@Url.Content("~/Scripts/modernizr.custom.79639.js")"></script>
+		<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+		<script src="@Url.Content("~/Scripts/jquery-ui-1.10.3.js")"></script>
+		<!--<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>-->
+		<script type="text/javascript" src='@Url.Content("~/Scripts/i18n/grid.locale-kr.js")'></script>
+		<script src="@Url.Content("~/Scripts/jquery.jqGrid.min.js")"></script>
+		<script type="text/javascript" src="@Url.Content("~/Scripts/JSONConvert/jQueryAddOn.js")"></script>
+		<script src="@Url.Content("~/Scripts/json2.js")" type="text/javascript"></script>
+		@RenderSection("head", required: false)
+		<style type="text/css">
+			body { min-width:760px; }
+		</style>
+    </head>
+    <body>
+		<div id="popupContent">
+			@RenderBody()
+		</div>
+    </body>
+</html>

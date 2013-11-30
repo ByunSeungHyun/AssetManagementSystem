@@ -1,0 +1,107 @@
+﻿@model SystemAsset.Domain.Entities.AssetServerInfoEx1T
+@using SystemAsset.WebUI.Models
+@{
+    ViewBag.Title = "ServerUpdate";
+    Layout = "~/Views/Shared/_LayoutPopup.cshtml";
+}
+@section head{
+	<script language="javascript" type="text/javascript" src="~/Views/Asset/ServerUpdate.js"></script>
+	<style type="text/css">
+		#ui-datepicker-div
+		{
+			display: none;
+		}
+	</style>
+	<script language = "javascript">
+		$(document).ready(function () {
+			ServerUpdate.Init();
+		});
+	</script>
+	
+}
+<div id="popup-wrap-large">
+	
+	<section>
+@using (Html.BeginForm("ServerUpdate", "Asset", FormMethod.Post, new { name = "frmServerUpdate", id = "frmServerUpdate" }))
+ {
+		<h3>@ViewData["Tiele"]</h3>
+		<table class="table-pop-large">
+			<tr>
+				<th>SEQNO</th>
+				<td>
+					@Html.TextBox("Seq", Model.Seq, new { id = "txtSeq", @class = "cell-input", disabled = true })
+				</td>
+				<th>SAPNO</th>
+				<td>
+					@Html.TextBox("SapNo", Model.SapNo, new { id = "txtSapNo", @class = "cell-input" })
+				</td>
+				<th>Serial No.</th>
+				<td>
+					@Html.TextBox("SerialNo", Model.SerialNo, new { id = "txtSerialNo", @class = "cell-input" })
+				</td>
+			</tr>
+			<tr>
+				<th>Hostname</th>
+				<td>
+					@Html.TextBox("ServerName", Model.ServerName, new { id = "txtServerName", @class = "cell-input" })
+				</td>
+				<th>장비구분</th>
+				<td>
+					@Html.DropDownList("EquipTypeCode", new SelectList(ViewBag.HardwareCodeList, "AssetCode", "CodeName", Model.EquipTypeCode), new { id = "selEquipTypeCode", @class = "cell-select" })
+				</td>
+				<th>수량</th>
+				<td>@Html.TextBox("Qty", Model.Qty, new { id = "txtQty", @class = "cell-input" })</td>
+			</tr>
+			<tr>
+				<th>Site</th>
+				<td>
+					@Html.DropDownList("SiteCode", new SelectList(ViewBag.SiteCodeList, "AssetCode", "CodeName", Model.SiteCode), new { id = "selSiteCode", @class = "cell-select" })
+				</td>
+				<th>업무구분</th>
+				<td>
+					@Html.DropDownList("TaskCode", new SelectList(ViewBag.TaskCodeList, "AssetCode", "CodeName", Model.TaskCode), new { id = "selTaskCode", @class = "cell-select" })
+				</td>
+				<th>서비스</th>
+				<td>
+					@Html.DropDownList("ServiceCode", new SelectList(ViewBag.ServiceCodeList, "AssetCode", "CodeName", Model.ServiceCode), new { id = "selServiceCode", @class = "cell-select" })
+				</td>
+			</tr>
+			<tr>
+				<th>IDC</th>
+				<td>
+					@Html.DropDownList("IdcCode", new SelectList(ViewBag.IdcCodeList, "IdcCode", "LClassName", Model.IdcCode), new { id = "selIdcCode", @class = "cell-select" })
+				</td>
+				<th>Rack</th>
+				<td>
+					@Html.DropDownList("RackCode", new SelectList(ViewBag.RackCodeList, "RackCode", "RackName", Model.RackCode), new { id = "selRackCode", @class = "cell-select" })
+				</td>
+				<th>Rack시작위치</th>
+				<td>@Html.TextBox("RackStartLocationValue", Model.RackStartLocationValue, new { id = "txtRackStartLocationValue", @class = "calendar" })</td>
+			</tr>
+			<tr>
+				<th>OS</th>
+				<td>
+					@Html.DropDownList("OsCode", new SelectList(ViewBag.OsCodeList, "AssetCode", "CodeName", Model.ServiceCode), new { id = "selOsCode", @class = "cell-select" })
+				</td>
+				<th>Vender</th>
+				<td>
+					@Html.DropDownList("VenderCode", new SelectList(ViewBag.VenderCodeList, "VenderCode", "VenderCode", Model.VenderCode), new { id = "selVenderCode", @class = "cell-select" })
+				</td>
+				<th>구입일자</th>
+				<td>@Html.TextBox("BuyDate", Model.BuyDate.ToFormatString("yyyy-MM-dd"), new { id = "txtBuyDate", @class = "calendar" })</td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td colspan="5">
+					@Html.TextArea("Content", Model.Content, 4, 80, new { id = "txtContent", @class = "cell-text" })
+				</td>
+			</tr>
+		</table>
+		<div class="button-wrap-pop">
+			<a href="javascript:;" id="btnSave" class="button-main">확인</a>
+			<a href="javascript:;" id="btnClose" class="button-sub">취소</a>
+		</div>
+ }
+	</section>
+</div>
+

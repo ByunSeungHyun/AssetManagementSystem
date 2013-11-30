@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "CommonAssetStorageVenderCodeList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section head{
+	<script language = "javascript">
+	    $(function () {
+	        $("#jqGridList").jqGrid({
+	            url: 'about:blank', // null 또는 ''을 입력하면 현재 페이지를 호출하는 불필요한 라운드트립이 발생하므로 'about:blank'를 호출하도록 한다.
+	            mtype: 'POST',
+	            datatype: function (postdata) {
+	                jQuery.ajax({
+	                    thegrid: this,
+	                    url: $("#jqGridList").getGridParam('url'),
+	                    type: 'POST',
+	                    data: $.JsonPostDataConverter(postdata),
+	                    dataType: "json",
+	                    complete: function (xmldata, stat) {
+	                        if (stat == "success") {
+	                            jsonObj = jQuery.parseJSON(xmldata.responseText, convertDates = true);
+	                            this.thegrid.addJSONData(jsonObj);
+	                        }
+	                    }
+	                })
+	            },
+	            colNames: ['VENDER CODE', 'VENDER명', "제품명", '크기'],
+	            colModel: [
+				{ name: 'VenderCode', index: 'VenderCode', width: 150, sortable: false, align: "center" },
+				{ name: 'VenderName', index: 'VenderName', width: 150, hidden: false, align: "center" },
+				{ name: 'ProductName', index: 'ProductName', width: 120, hidden: false, align: "center" },
+				{ name: 'ServerCnt', index: 'ServerCnt', width: 120, sortable: false, align: "center" }
+
+			],
+	            rowNum: 10,
+	            rowList: [10, 20, 30, 40],
+	            pager: '#jpGridPager',
+	            sortname: 'LClassCode',
+	            rowTotal: -1,
+	            loadError: function (xhr, st, err) {
+	                alert("Type: " + st + "; Response: " + xhr.status + " " + xhr.statusText);
+	            },
+	            gridview: true,
+	            //viewrecords: true,
+	            sortorder: "desc",
+	            //recordtext: '{0} 부터 {1} 까지 : 전체 {2} ',
+	            jsonReader: {
+	                repeatitems: false,
+	                id: "0"
+	            },
+	            //scroll: 1,
+	            loadonce: false,
+	            shrinkToFit: false,
+	            autowidth: true,
+	            //caption: "KeywordLanding",
+	            //rownumbers: true,
+	            width: '540',
+	            height: '100%'
+
+	        });
+	        $("#jqGridList").jqGrid('navGrid', '#jpGridPager', { edit: true, add: false, del: false, search: false });
+
+
+	        fnSearchList();
+	    });
+
+	    function fnSearchList() {
+	        $("#jqGridList").setGridParam({
+	            url: '/Code/GetAssetStorageVenderCodeList/',
+	            mtype: 'POST',
+	            postData: {}
+	        });
+	        $("#jqGridList").trigger('reloadGrid');
+	    }
+		
+	</script>
+}
+<h2><i class="fa fa-pencil-square-o fa-fw"></i>@ViewData["subject"]</h2>
+<section>
+	<div class="table-scroll">
+	<table class="table-1 table-small" id="jqGridList">
+	</table>
+	<div id="jpGridPager"></div>
+	</div>
+</section>

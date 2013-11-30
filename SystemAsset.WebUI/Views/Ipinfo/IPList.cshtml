@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "IPList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head{
+	<script language="javascript" type="text/javascript" src="~/Views/Ipinfo/IPList.js"></script>
+	<script language = "javascript">
+	    $(function () {
+	        $("#jqGridList").jqGrid({
+	            mtype: 'POST',
+	            datatype: function (postdata) {
+	                jQuery.ajax({
+	                    thegrid: this,
+	                    url: $("#jqGridList").getGridParam('url'),
+	                    type: 'POST',
+	                    data: $.JsonPostDataConverter(postdata),
+	                    dataType: "json",
+	                    complete: function (xmldata, stat) {
+	                        if (stat == "success") {
+	                            jsonObj = jQuery.parseJSON(xmldata.responseText, convertDates = true);
+	                            this.thegrid.addJSONData(jsonObj);
+	                        }
+	                    }
+	                })
+	            },
+	            width: '900px',
+	            height: '500',
+	            rowNum: 10,
+	            //rowList: [10, 20, 30, 40],
+	            pager: '#jpGridPager',
+	            sortname: 'IP',
+	            sortorder: "desc",
+	            //rowTotal: -1,
+	            loadError: function (xhr, st, err) {
+	                alert("Type: " + st + "; Response: " + xhr.status + " " + xhr.statusText);
+	            },
+	            //gridview: true,
+	            viewrecords: true,
+	            pgbuttons: true,
+	            jsonReader: { repeatitems: false, id: "0" },
+	            //autowidth: true,
+	            multiselect: true,
+	            colModel: [
+				{ name: 'ServerIp', index: 'ServerIp', label: 'IP', width: 100, hidden: false, sortable: false, align: "center" },
+				{ name: 'ServerName', index: 'ServerName', label: 'Host Name.', width: 200, sortable: false, align: "center" },
+				{ name: 'AssignDate', index: 'AssignDate', label: '할당 부분', width: 200, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'ReturnDate', index: 'ReturnDate', label: '반납일자.', width: 200, sortable: false, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, align: "center" },
+				{ name: 'OldServerName', index: 'OldServerName', label: 'Old Hostname', width: 200, sortable: false, align: "center" },
+				{ name: 'ManagerName', index: 'ManagerName', label: '담당자', width: 200, sortable: false, align: "center" },
+				{ name: 'IpClassName', index: 'IpClassName', label: 'IDC', width: 200, sortable: false, align: "center" }
+				]
+                    
+	        });
+	        $("#jqGridList").jqGrid('navGrid', '#jpGridPager', { edit: false, add: false, del: false, search: false });
+
+	    });
+
+	    $(document).ready(function () {
+	        IPList.Init();
+	    });
+		
+	</script>	
+}
+<h2><i class="fa fa-file-text fa-fw"></i>IP 조회</h2>
+@using (Html.BeginForm("IPList", "IpInfo", FormMethod.Post, new { name = "frmIpList", id = "frmIpList" }))
+{
+	@Html.TextBox("searchText", "", new { id = "txtSearchText", @class = "search" })
+}
+<section>
+	<div class="table-scroll">
+	<table class="table-1 cell-separate" id="jqGridList">
+	</table>
+	<div id="jpGridPager"></div>
+	</div>
+</section>
+
